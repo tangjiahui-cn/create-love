@@ -1,7 +1,7 @@
 # easy-cli
 It's easy to create a empty project.
 
-## How to use?
+## How To Use?
 show all projects.
 ```shell
 easy ls
@@ -15,9 +15,21 @@ easy ls
 
 ## Next Plan
 ```shell
-# 按步骤创建一个项目
+# create a project step by step.
 easy init
 
-# 从一个指定的模板创建项目
+# create a project from template to target directory.
 easy create <template-name> [target]
+```
+
+## Run Development
+```shell
+# install dependencies.
+pnpm install
+
+# link to global env.
+npm link
+
+# run dev-bin.
+easyl ls
 ```
