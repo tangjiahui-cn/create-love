@@ -1,10 +1,10 @@
-# easy-cli
+# create-love
 It's easy to create a empty project.
 
 ## How To Use?
 show all projects.
 ```shell
-easy ls
+love ls
 
 # easy ls
 # - components-ts-vue
@@ -14,7 +14,7 @@ easy ls
 ```
 create a empty project
 ```shell
-easy create spa-react18-vite demo
+love create spa-react18-vite demo
 
 # easy create <template-name> [project-name]
 ```
@@ -22,10 +22,10 @@ easy create spa-react18-vite demo
 ## Next Plan
 ```shell
 # create a project step by step.
-easy init
+love init
 
 # create a project from template to target directory.
-easy create <template-name> [target]
+love create <template-name> [target]
 ```
 
 ## Run Development
@@ -37,5 +37,5 @@ pnpm install
 npm link
 
 # run dev-bin.
-easyl ls
+love ls
 ```
