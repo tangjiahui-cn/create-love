@@ -1,14 +1,19 @@
 {
-  "name": "easy-cli",
-  "version": "0.0.1",
+  "name": "create-love",
+  "version": "0.0.2",
   "type": "module",
   "private": false,
   "description": "A front-end scaffold for create react/vue project.",
   "engines": {
     "node": ">=14.0.0"
   },
+  "files": [
+    "./templates",
+    "./love.js",
+    "./dist"
+  ],
   "bin": {
-    "easy": "./easy.js"
+    "love": "./love.js"
   },
   "scripts": {
     "build": "unbuild"
