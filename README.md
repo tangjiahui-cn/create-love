@@ -12,6 +12,12 @@ easy ls
 # - lib-ts
 # - lib-js
 ```
+create a empty project
+```shell
+easy create spa-react18-vite demo
+
+# easy create <template-name> [project-name]
+```
 
 ## Next Plan
 ```shell

@@ -1,8 +1,7 @@
 import { program } from "commander";
 import chalk from "chalk";
 import * as commands from "./commands";
-
-const pkg = require("../package.json");
+import pkg from '../package.json'
 
 program
   .name(pkg.name)
@@ -18,11 +17,8 @@ program.on("--help", () => {
   );
 });
 
-program
-  .command("ls [name]")
-  .description("show all templates")
-  .action(() => {
-    commands.ls();
-  });
+// register commands.
+commands.ls(program)
+commands.create(program)
 
 program.parse(process.argv);
