@@ -1,6 +1,6 @@
 {
   "name": "create-love",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "private": false,
   "description": "A front-end scaffold for create react/vue project.",
@@ -8,9 +8,9 @@
     "node": ">=14.0.0"
   },
   "files": [
-    "./templates",
     "./love.js",
-    "./dist"
+    "templates/**/*",
+    "dist/**/*"
   ],
   "bin": {
     "love": "./love.js"
