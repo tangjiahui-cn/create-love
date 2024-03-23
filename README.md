@@ -1,6 +1,11 @@
 # create-love
 It's easy to create a empty project.
 
+## Install
+```shell
+npm i -g create-love
+```
+
 ## How To Use?
 show all projects.
 ```shell
