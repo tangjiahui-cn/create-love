@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "lib": ["ESNext", "DOM"],
+    "target": "ESNext",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "noImplicitAny": false,
+    "esModuleInterop": true,
+    "strict": true,
+    "paths": {
+      "@/*": ["./packages/*"],
+      "@": ["./packages"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
