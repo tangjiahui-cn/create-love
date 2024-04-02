@@ -7,7 +7,7 @@
 
 import { createContext, useContext } from "react";
 import type { Theme } from '../_theme/theme';
-import type { ComponentProps } from './component';
+import type { ComponentProps } from './propTypes';
 import en_US from "../_locales/en_US";
 import type { Locale } from '../_locales'
 
@@ -29,7 +29,7 @@ const INIT_CONTEXT: ContextValue = {
 
 const context = createContext<ContextValue>(INIT_CONTEXT)
 
-function ConfigProvider(props: ConfigProviderProps) {
+function ConfigProvider(props: ConfigProviderProps) {  
   return (
     <context.Provider
       value={{

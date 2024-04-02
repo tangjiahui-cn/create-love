@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "lib": ["ESNext", "DOM"],
+    "target": "ESNext",
+    "jsx": "react-jsx",
+    "noImplicitAny": false,
+    "esModuleInterop": true,
+    "strict": true,
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "declarationDir": "./types",
+    "paths": {
+      "@/*": ["./packages/*"],
+      "@": ["./packages"]
+    },
+  },
+  "include": ["packages", "./typings.d.ts"]
+}

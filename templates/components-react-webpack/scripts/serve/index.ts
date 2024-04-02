@@ -30,7 +30,7 @@ runWebpackDevServer({
             loader: "css-loader",
             options: {
               modules: {
-                localIdentName: "[local]",
+                localIdentName: "tiger-ui-[local]",
               },
             },
           },
