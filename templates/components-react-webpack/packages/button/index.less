@@ -1,49 +1,48 @@
 @import "../_theme/theme.less";
+@prefix: ~"@{namespace}-btn";
 
-.btn {
+.@{prefix} {
   padding: 8px 16px;
   border-radius: 2px;
   cursor: pointer;
   transition: all 0.3s;
   border: 1px solid transparent;
 
-  &-type {
-    &-primary {
+  &-primary {
+    border-color: @primary;
+    background-color: @primary;
+    color: white;
+    &:hover {
+      background-color: @primaryLight;
+      border-color: @primaryLight;
+    }
+  }
+
+  &-default {
+    color: @color;
+    border-color: #e8e8e8;
+    background-color: white;
+    &:hover {
+      color: @primary;
       border-color: @primary;
-      background-color: @primary;
-      color: white;
-      &:hover {
-        background-color: @primaryLight;
-        border-color: @primaryLight;
-      }
     }
+  }
 
-    &-default {
-      color: @color;
-      border-color: #e8e8e8;
-      background-color: white;
-      &:hover {
-        color: @primary;
-        border-color: @primary;
-      }
+  &-dashed {
+    color: @color;
+    border-color: #e8e8e8;
+    background-color: white;
+    &:hover {
+      color: @primary;
+      border-color: @primary;
     }
+  }
 
-    &-dashed {
-      color: @color;
-      border-color: #e8e8e8;
-      background-color: white;
-      &:hover {
-        color: @primary;
-        border-color: @primary;
-      }
-    }
-
-    &-text {
-      background: transparent;
-      &:hover {
-        color: @colorLight;
-        background-color: whitesmoke;
-      }
+  &-text {
+    background: transparent;
+    &:hover {
+      color: @colorLight;
+      background-color: whitesmoke;
     }
   }
 }

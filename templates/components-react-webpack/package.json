@@ -9,7 +9,8 @@
   "module": "./es/index.js",
   "types": "./types/index.ts",
   "scripts": {
-    "dev": "esno ./scripts/serve/index.ts",
+    "docs": "dumi dev",
+    "dev": "cross-env mode=development esno ./scripts/serve/index.ts",
     "build": "cross-env format=es,umd esno ./scripts/build/index.ts",
     "build:types": "rimraf types && tsc -p ./tsconfig.types.json"
   },
@@ -27,6 +28,7 @@
     "cross-env": "^7.0.3",
     "css-loader": "^6.10.0",
     "css-minimizer-webpack-plugin": "^6.0.0",
+    "dumi-theme-lobehub": "^1.7.6",
     "esno": "^4.7.0",
     "html-webpack-plugin": "^5.6.0",
     "less-loader": "^11.1.4",
@@ -38,11 +40,15 @@
     "typescript": "^5.4.3",
     "webpack": "^5.91.0",
     "webpack-dev-server": "^4.15.2",
+    "webpack-merge": "^5.10.0",
     "webpackbar": "^6.0.1"
   },
   "dependencies": {
+    "class-css-stringify": "^1.0.29",
     "classnames": "^2.5.1",
+    "dumi": "^2.2.17",
     "lodash-es": "^4.17.21",
+    "nanoid": "^5.0.6",
     "react": "18",
     "react-dom": "18"
   }

@@ -1,5 +1,7 @@
-.space {
-  display: flex;
+@prefix: ~'@{namespace}-space';
+
+.@{prefix} {
+  display: inline-flex;
 
   &-block {
     width: 100%;
@@ -11,5 +13,6 @@
 
   &-horizontal {
     flex-direction: row;
+    align-items: center;
   }
 }

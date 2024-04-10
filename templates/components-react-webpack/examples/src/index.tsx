@@ -2,11 +2,32 @@ import { Space, Button, ConfigProvider, ButtonProps, setTheme } from '@'
 import { Locale } from '@/_locales'
 import zh_CN from '@/_locales/zh_CN'
 import en_US from '@/_locales/en_US'
-import { useState } from 'react'
+import React, { useState } from 'react'
+
+class Com extends React.Component<any> {
+  constructor(props) {
+    super(props)
+  }
+  render() {
+    return <div className={this.props?.className}>11
+      <div>
+        <Button type='primary' />
+      </div>
+    </div>
+  }
+}
+class ComNull extends React.Component {
+  render() {
+    return null
+  }
+}
+
 
 const App: React.FC = () => {
   const [locale, setLocale] = useState<Locale>()
   const [primary, setPrimary] = useState<string>('red');
+  const [visible, setVisible] = useState(true);
+  const [theme, setTheme] = useState<any>(undefined);
 
   function renderComponent() {
     return (
@@ -21,60 +42,33 @@ const App: React.FC = () => {
   }
 
   return (
-    <Space direction='vertical'>
+    <div>
       <Space>
-        <Button onClick={() => setLocale(zh_CN)}>中文</Button>
-        <Button onClick={() => setLocale(en_US)}>英文</Button>
-
-      </Space>
-      <Space>
-        {renderComponent()}
-        <Space>
-          全局：
-          <input type='color' onChange={e => {
-            setTheme('primary', e.target.value)
-          }} />
-        </Space>
+        <Button type='primary' onClick={() => setVisible(true)}>显示</Button>
+        <Button onClick={() => setVisible(false)}>隐藏</Button>
+        <Button onClick={() => setTheme({ primary: 'green' })}>设置主题</Button>
+        <Button onClick={() => setTheme(undefined)}>隐藏主题</Button>
+        <input type='color' onChange={e => setPrimary(e.target.value)} />
       </Space>
       <div>
-        <ConfigProvider
-          theme={{
-            primary,
-            primaryLight: '#da7272'
-          }}
-          locale={locale}
-          component={{
-            type: 'primary'
-          } as ButtonProps}
-        >
-          <Space direction='vertical'>
-            <Space>
-              {renderComponent()}
-              <Space>
-                局域：
-                <input type='color' onChange={e => {
-                  setPrimary(e.target.value)
-                }} />
-              </Space>
-            </Space>
-            <ConfigProvider
-              theme={{
-                primaryLight: '#da7272'
-              }}
-              locale={locale}
-              component={{
-                type: 'primary'
-              } as ButtonProps}
-            >
+        {
+          visible && (
+            <ConfigProvider theme={{ primary }}>
+              <Com />
+              <ComNull />
+              xxx
+              <div>
+                {renderComponent()}
+              </div>
               {renderComponent()}
             </ConfigProvider>
-          </Space>
-        </ConfigProvider>
+          )
+        }
       </div>
-      <div>
-        {renderComponent()}
-      </div>
-    </Space>
+      <ConfigProvider theme={theme}>
+        <Button type={'primary'}>11</Button>
+      </ConfigProvider>
+    </div>
   )
 }
 
