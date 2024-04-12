@@ -7,6 +7,11 @@
 *.yaml
 node_modules
 
+/es/
+/lib/
+/types/
+/.dumi/
+
 .prettierrc
 .prettierignore
 .editorconfig

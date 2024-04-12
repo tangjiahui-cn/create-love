@@ -3,3 +3,7 @@
 *.json
 
 /examples/
+/es/
+/lib/
+/types/
+/.dumi/
