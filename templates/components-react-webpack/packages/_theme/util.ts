@@ -1,15 +1,15 @@
 /**
  * theme utils.
- * 
+ *
  * @author tangjiahui
  * @date 2024/3/28
  */
 
-import type { Theme } from "./theme";
+import type { Theme } from './theme';
 
 /**
  * modify global theme variable.
- * 
+ *
  * @param name variable name.
  * @param value variable value.
  */
@@ -19,7 +19,7 @@ export function setTheme(name: keyof Theme, value: string) {
 
 /**
  * get a variable value of theme.
- * 
+ *
  * @param name variable name.
  * @returns variable value.
  */

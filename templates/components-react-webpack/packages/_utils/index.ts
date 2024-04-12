@@ -1,14 +1,13 @@
-
 /**
  * stringify a variable.
- * 
+ *
  * @param o any variable
- * @returns 
+ * @returns
  */
-export function stringify (o: any) : string {
+export function stringify(o: any): string {
   try {
     return JSON.stringify(o);
   } catch {
-    return ''
+    return '';
   }
 }

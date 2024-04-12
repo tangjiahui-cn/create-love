@@ -1,13 +1,13 @@
 /**
  * space
- * 
+ *
  * @author tangjiahui
  * @date 2024/4/2
  */
 
-import { DOMAttributes } from "react";
-import classNames from "classnames";
-import { useComponent } from "@/_hooks/useComponent";
+import { DOMAttributes } from 'react';
+import classNames from 'classnames';
+import { useComponent } from '@/_hooks/useComponent';
 import './index.less';
 
 export interface SpaceProps extends DOMAttributes<HTMLDivElement> {
@@ -30,13 +30,17 @@ export interface SpaceProps extends DOMAttributes<HTMLDivElement> {
 }
 
 function Space(props: SpaceProps) {
-  const { prefix } = useComponent('space')
+  const { prefix } = useComponent('space');
   const classes: string = classNames(
     props?.className,
     `${prefix}`,
-    `${prefix}-${props?.direction || 'horizontal'}`
-  )
-  return <div className={classes} style={{ gap: props?.size || 8 }}>{props?.children}</div>
+    `${prefix}-${props?.direction || 'horizontal'}`,
+  );
+  return (
+    <div className={classes} style={{ gap: props?.size || 8 }}>
+      {props?.children}
+    </div>
+  );
 }
 
 export default Space;

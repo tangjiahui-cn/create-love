@@ -1,14 +1,14 @@
 /**
  * Button
- * 
+ *
  * @author tangjiahui
  * @default 2024/3/28
  */
-import React, { DOMAttributes, useEffect, useRef } from 'react'
+import React, { DOMAttributes } from 'react';
 import classNames from 'classnames';
-import { omit } from "lodash-es";
+import { omit } from 'lodash-es';
 import { useComponent } from '@/_hooks/useComponent';
-import './index.less'
+import './index.less';
 
 export type ButtonType = 'primary' | 'default' | 'dashed' | 'text';
 export interface ButtonProps extends DOMAttributes<HTMLButtonElement> {
@@ -27,23 +27,18 @@ export interface ButtonProps extends DOMAttributes<HTMLButtonElement> {
 }
 
 function Button(props: ButtonProps) {
-  const { prefix, locale } = useComponent('btn')
+  const { prefix, locale } = useComponent('btn');
 
-  const domAttributes: DOMAttributes<HTMLButtonElement> = omit(props, ['type', 'children'])
+  const domAttributes: DOMAttributes<HTMLButtonElement> = omit(props, ['type', 'children']);
   const type = props?.type || 'default';
 
-  const classes: string = classNames(
-    props?.className,
-    `${prefix}`,
-    `${prefix}-${type}`,
-  )
+  const classes: string = classNames(props?.className, `${prefix}`, `${prefix}-${type}`);
 
   return (
-    <button
-      {...domAttributes}
-      className={classes}
-    >{props?.children || locale?.buttonText}</button>
-  )
+    <button {...domAttributes} className={classes}>
+      {props?.children || locale?.buttonText}
+    </button>
+  );
 }
 
-export default Button
+export default Button;

@@ -1,12 +1,12 @@
 /**
  * useCss
- * 
+ *
  * @description create css-variable style tag for scope theme.
  */
-import { nanoid } from "nanoid";
-import { useRef } from "react";
-import { getStyleString } from "class-css-stringify";
-import { useUnmount } from "./useUnmount";
+import { nanoid } from 'nanoid';
+import { useRef } from 'react';
+import { getStyleString } from 'class-css-stringify';
+import { useUnmount } from './useUnmount';
 
 interface SimpleObject {
   [K: string]: any;
@@ -21,8 +21,8 @@ export function useCss(hashLen: number = 8) {
 
     function updateStyle(text: string): void {
       if (!styleRef.current) {
-        styleRef.current = document.createElement("style");
-        styleRef.current.setAttribute("css-var", key);
+        styleRef.current = document.createElement('style');
+        styleRef.current.setAttribute('css-var', key);
         document.head.appendChild(styleRef.current);
       }
       styleRef.current.innerHTML = text;

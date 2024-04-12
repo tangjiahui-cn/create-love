@@ -1,12 +1,12 @@
-import { defineConfig } from "dumi";
-import path from "path";
-import pkg from "./package.json";
-import fs from "fs";
-import { root } from "./scripts/share";
+import { defineConfig } from 'dumi';
+import path from 'path';
+import pkg from './package.json';
+import fs from 'fs';
+import { root } from './scripts/share';
 
 export default defineConfig({
   title: pkg.name,
-  outputPath: "docs-dist",
+  outputPath: 'docs-dist',
   themeConfig: {
     logo: false,
     title: pkg.name,
@@ -14,14 +14,14 @@ export default defineConfig({
     footer: false,
     apiHeader: false,
     prefersColor: {
-      default: "light",
+      default: 'light',
       switch: false,
     },
   },
   apiParser: {},
   resolve: {
-    docDirs: ["docs"],
-    entryFile: path.resolve(__dirname, "./packages/index.ts"),
+    docDirs: ['docs'],
+    entryFile: path.resolve(__dirname, './packages/index.ts'),
   },
   lessLoader: {
     javascriptEnabled: true,
@@ -29,8 +29,8 @@ export default defineConfig({
       namespace: pkg.name,
     },
   },
-  styles: [fs.readFileSync(root("./es/index.css"), 'utf-8')],
+  styles: [fs.readFileSync(root('./es/index.css'), 'utf-8')],
   chainWebpack(memo: any) {
-    memo.resolve.alias.set("@", root("./packages"));
+    memo.resolve.alias.set('@', root('./packages'));
   },
 });

@@ -1,7 +1,7 @@
-import { root, runWebpack } from "../share";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import common from "./common";
-import { merge } from "webpack-merge";
+import { root, runWebpack } from '../share';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import common from './common';
+import { merge } from 'webpack-merge';
 
 export async function buildESM() {
   return runWebpack(
@@ -10,16 +10,16 @@ export async function buildESM() {
         outputModule: true,
       },
       output: {
-        path: root("./es"),
+        path: root('./es'),
         library: {
-          type: "module",
+          type: 'module',
         },
       },
       plugins: [
         new MiniCssExtractPlugin({
-          filename: "./index.css",
+          filename: './index.css',
         }),
       ],
-    })
+    }),
   );
 }

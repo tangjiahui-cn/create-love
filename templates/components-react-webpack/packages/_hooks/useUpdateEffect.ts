@@ -5,7 +5,7 @@
  * @date 2024/4/3
  */
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef } from 'react';
 
 export function useUpdateEffect(callback: () => void | (() => void), effect: unknown[]) {
   const isNotEffect = useRef(true);
