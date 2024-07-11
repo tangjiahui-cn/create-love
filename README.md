@@ -1,17 +1,17 @@
-# create-love
-It's easy to create a empty project.
+# create-tt
+一个前端脚手架，支持命令式和步骤式
 
 ## Install
 ```shell
-npm i -g create-love
+npm i -g create-tt
 ```
 
 ## How To Use?
 show all projects.
 ```shell
-love ls
+tt ls
 
-# easy ls
+# tt ls
 # - components-ts-vue
 # - components-ts-react
 # - lib-ts
@@ -19,18 +19,18 @@ love ls
 ```
 create a empty project
 ```shell
-love create spa-react18-vite demo
+tt create spa-react18-vite demo
 
-# easy create <template-name> [project-name]
+# tt create <template-name> [project-name]
 ```
 
 ## Next Plan
 ```shell
 # create a project step by step.
-love init
+tt init
 
 # create a project from template to target directory.
-love create <template-name> [target]
+tt create <template-name> [target]
 ```
 
 ## Run Development
@@ -42,5 +42,5 @@ pnpm install
 npm link
 
 # run dev-bin.
-love ls
+tt ls
 ```

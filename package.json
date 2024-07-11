@@ -1,6 +1,6 @@
 {
-  "name": "create-love",
-  "version": "0.0.3",
+  "name": "create-tt",
+  "version": "0.0.1",
   "type": "module",
   "private": false,
   "description": "A front-end scaffold for create react/vue project.",
@@ -13,7 +13,7 @@
     "dist/**/*"
   ],
   "bin": {
-    "love": "./love.js"
+    "tt": "./love.js"
   },
   "scripts": {
     "build": "unbuild"
